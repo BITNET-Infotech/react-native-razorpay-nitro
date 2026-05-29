@@ -8,7 +8,7 @@
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![platform](https://img.shields.io/badge/platform-iOS%20%7C%20Android-lightgrey.svg)]()
 [![React Native](https://img.shields.io/badge/React%20Native-0.71+-brightgreen.svg)](https://reactnative.dev/)
-[![Nitro Modules](https://img.shields.io/badge/Nitro%20Modules-0.31+-purple.svg)](https://nitro.margelo.com/)
+[![Nitro Modules](https://img.shields.io/badge/Nitro%20Modules-0.35+-purple.svg)](https://nitro.margelo.com/)
 
 [📖 Usage](#usage) • [🔄 Migration](#migration-from-react-native-razorpay) • [📚 API Reference](#api-reference)
 
@@ -182,13 +182,18 @@ interface ErrorResponse {
 | React Native | 0.71+ |
 | iOS | 13.0+ |
 | Android SDK | 24+ |
-| react-native-nitro-modules | 0.31+ |
+| react-native-nitro-modules | 0.35+ |
 
 ## 🤝 Contributing
 
 Pull requests are welcome! For major changes, please open an issue [here](https://github.com/BITNET-Infotech/react-native-razorpay-nitro/issues) first.
 
 ## ❓ Troubleshooting
+
+**Android build fails with `updateNative` or `JHybridObject` C++ errors:**
+
+- Use `react-native-nitro-modules` **0.35+** ([Nitro 0.35 migration](https://github.com/mrousavy/nitro/releases/tag/v0.35.0))
+- Reinstall this package at **1.0.1+** (includes Nitro 0.35–compatible generated bindings)
 
 **"SDK Compatibility Status" dialog on Android:**
 - This dialog only appears in debug builds and is by design from Razorpay SDK
