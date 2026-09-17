@@ -14,8 +14,14 @@
   },
   "autolinking": {
     "Razorpay": {
-      "swift": "HybridRazorpay",
-      "kotlin": "HybridRazorpay"
+      "ios": {
+        "language": "swift",
+        "implementationClassName": "HybridRazorpay"
+      },
+      "android": {
+        "language": "kotlin",
+        "implementationClassName": "HybridRazorpay"
+      }
     }
   },
   "ignorePaths": [

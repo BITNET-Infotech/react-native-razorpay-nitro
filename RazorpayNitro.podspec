@@ -29,8 +29,5 @@ Pod::Spec.new do |s|
   s.dependency 'React-jsi'
   s.dependency 'React-callinvoker'
   s.dependency 'razorpay-pod'
-  # Override razorpay-core-pod to 1.0.4 which has arm64 simulator support
-  # (razorpay-pod 1.5.2 pins to 1.0.3 which incorrectly excludes arm64 simulators)
-  s.dependency 'razorpay-core-pod', '1.0.4'
   install_modules_dependencies(s)
 end
