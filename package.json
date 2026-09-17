@@ -1,6 +1,6 @@
 {
   "name": "@bitnet-infotech/react-native-razorpay-nitro",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "High-performance React Native wrapper for Razorpay payments, built with Nitro Modules. Drop-in compatible with react-native-razorpay.",
   "main": "lib/index",
   "module": "lib/index",
