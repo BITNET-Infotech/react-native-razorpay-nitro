@@ -1,6 +1,6 @@
 {
   "name": "@bitnet-infotech/react-native-razorpay-nitro",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "High-performance React Native wrapper for Razorpay payments, built with Nitro Modules. Drop-in compatible with react-native-razorpay.",
   "main": "lib/index",
   "module": "lib/index",
@@ -35,7 +35,7 @@
     "lint-ci": "eslint \"**/*.{js,ts,tsx}\" -f @jamesacarr/github-actions",
     "typescript": "tsc",
     "specs": "tsc --noEmit false && node --stack-size=65536 ./node_modules/.bin/nitrogen --logLevel=debug",
-    "prepublishOnly": "npm run specs && npm run typescript"
+    "prepublishOnly": "npm run typescript"
   },
   "keywords": [
     "react-native",
