@@ -1,10 +1,10 @@
-# react-native-razorpay-nitro
+# @bitnet-infotech/react-native-razorpay-nitro
 
 > 💳 High-performance Razorpay payment SDK for React Native, powered by [Nitro Modules](https://nitro.margelo.com). Drop-in compatible with the official package.
 
 <div align="center">
 
-[![npm version](https://img.shields.io/npm/v/react-native-razorpay-nitro.svg)](https://www.npmjs.com/package/react-native-razorpay-nitro)
+[![npm version](https://img.shields.io/npm/v/@bitnet-infotech/react-native-razorpay-nitro.svg)](https://www.npmjs.com/package/@bitnet-infotech/react-native-razorpay-nitro)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![platform](https://img.shields.io/badge/platform-iOS%20%7C%20Android-lightgrey.svg)]()
 [![React Native](https://img.shields.io/badge/React%20Native-0.71+-brightgreen.svg)](https://reactnative.dev/)
@@ -38,11 +38,11 @@ This package solves both while maintaining 100% API compatibility.
 ## 📦 Installation
 
 ```bash
-npm install react-native-razorpay-nitro react-native-nitro-modules
+npm install @bitnet-infotech/react-native-razorpay-nitro react-native-nitro-modules
 # or
-yarn add react-native-razorpay-nitro react-native-nitro-modules
+yarn add @bitnet-infotech/react-native-razorpay-nitro react-native-nitro-modules
 # or
-bun add react-native-razorpay-nitro react-native-nitro-modules
+bun add @bitnet-infotech/react-native-razorpay-nitro react-native-nitro-modules
 ```
 
 ### iOS
@@ -50,8 +50,6 @@ bun add react-native-razorpay-nitro react-native-nitro-modules
 ```bash
 cd ios && bundle exec pod install
 ```
-
-> **Note:** Uses `razorpay-core-pod 1.0.4` with native arm64 simulator support.
 
 ### Android
 
@@ -63,7 +61,7 @@ Simply change your import - **that's it!**
 
 ```diff
 - import RazorpayCheckout from 'react-native-razorpay';
-+ import RazorpayCheckout from 'react-native-razorpay-nitro';
++ import RazorpayCheckout from '@bitnet-infotech/react-native-razorpay-nitro';
 ```
 
 The API is identical. No code changes required.
@@ -71,7 +69,7 @@ The API is identical. No code changes required.
 ## 💡 Usage
 
 ```typescript
-import RazorpayCheckout from 'react-native-razorpay-nitro';
+import RazorpayCheckout from '@bitnet-infotech/react-native-razorpay-nitro';
 
 const options = {
   key: 'your_razorpay_key',
@@ -193,16 +191,16 @@ Pull requests are welcome! For major changes, please open an issue [here](https:
 **Android build fails with `updateNative` or `JHybridObject` C++ errors:**
 
 - Use `react-native-nitro-modules` **0.35+** ([Nitro 0.35 migration](https://github.com/mrousavy/nitro/releases/tag/v0.35.0))
-- Reinstall this package at **1.0.1+** (includes Nitro 0.35–compatible generated bindings)
+- Reinstall this package at **1.1.0+** (includes Nitro 0.35–0.37 compatible generated bindings)
 
 **"SDK Compatibility Status" dialog on Android:**
 - This dialog only appears in debug builds and is by design from Razorpay SDK
 - It will NOT appear in release builds
 - No action needed - this is normal behavior during development
 
-**iOS simulator crashes on Intel Mac:**
-- Uses `razorpay-core-pod 1.0.4` with arm64 support
-- Run `pod install` to ensure correct version
+**iOS arm64 simulator issues:**
+- This package natively supports arm64 simulators on M1/M2/M3/M4 Macs
+- Run `pod install` to ensure correct CocoaPods resolution
 
 **Payment fails silently:**
 - Check that `order_id` is valid and not expired
